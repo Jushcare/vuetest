@@ -1,18 +1,22 @@
 <template>
+<div id="content" class="p-4">
 
-<div class="container-fluid">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="">Dashboard</div>
+  </div>
   <div class="row">
 <div class="col-md-6 col-sm-6 col-xs-12" id="root">
-<div class="panel panel-primary diff">
+<div class="panel panel-primary">
 <div class="panel-heading" style="font-size:17px">Planning Fee Assessment</div>
 <div class="panel-body">
   <div class="form-group">
-      <label for="apptype">Application Type {{gtotal}} </label>
-      <input type="text" name="apptype" v-model="newUser.apptype" class="form-control" placeholder="Application Type" value="500" required>
+      <label for="apptype">Application Type {{apptype}} </label>
+      <input type="text" name="apptype" v-model="apptype" class="form-control" placeholder="Application Type" value="500" required>
     </div>
     <div class="form-group">
       <label for="building">Building Category</label>
-      <input type="text" name="building" v-model="newUser.building" class="form-control" placeholder="Building Category" value="200" required>
+      <input type="text" name="building" v-model="building" class="form-control" placeholder="Building Category" value="200" required>
     </div>
     <div class="form-group">
       <label for="dev">Development Type</label>
@@ -46,7 +50,7 @@
 </div>
 </div>
 
-
+</div>
 
 </div>
 
