@@ -7,28 +7,24 @@
       <div class="">Dashboard</div>
   </div>
     <div class="row">
-      <div class="col-md-6 col-xs-12" id="userTable">
+      <div class="col-md-6 col-xs-12">
         <div class="caption"> Application Pending Assessment</div>
       <div class="table-responsive">
         <table class="table table-striped table-bordered">
-          <thead class="indigo text-white">
+          <thead class="indigo text-white" id="userTable">
             <tr>
               <th>SN</th>
               <th>Name</th>
               <th>Phone</th>
+              <th>Rank</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>1</td>
+          <tr v-for="data in userDatas" :key="data.id">
+            <td>{{data.id}}</td>
             <td>Johnson Johnson</td>
             <td>0123456789</td>
-      <td><a href="#" class="btn btn-info"> Process </a></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Johnson Johnson</td>
             <td>0123456789</td>
       <td><a href="#" class="btn btn-info"> Process </a></td>
           </tr>
@@ -71,24 +67,18 @@
 </template>
 
 <script>
-//import VueRouter from 'vue-router';
-//const route = new VueRouter;
-//export default {
-//  name: 'assessment',
-//  data() {
-  //  return {
-  //    userDatas: [
-//        { id: 1, name: "Johnson Johnson", phone: '0123456789' },
-  //      { id: 2, name: "Johnson Johnson2", phone: '0123456789' },
-  //      { id: 3, name: "Johnson Johnson3", phone: '0123456789'},
-  //    ]
-//  },
 
-//  methods : {
-//    processData() {
-//      route.push('process');
-//    }
-//  },
-
-//}
+var userTable = new Vue({
+  el: '#userTable',
+  data: {
+    userDatas: [
+      { id: 1, name: "Samuel Smith", phone: '3059171301', rank: 'IT Manager' },
+      { id: 2, name: "Rose John", phone: '2106848953', rank: 'Paleontologist' },
+      { id: 3, name: "Rachel Smith", phone: '7653380312', rank: 'Dev'},
+      { id: 4, name: "Monica Geller", phone: '7145413336', rank: 'Head Tech' },
+      { id: 5, name: "Joey Tribbiani", phone: '9722976037', rank: 'SV' },
+      { id: 6, name: "Bobby Buffay", phone: '7603188376', rank: 'SUE' }
+    ]
+  }
+});
 </script>
